@@ -1,0 +1,12 @@
+images {
+  image: "/assets/images/grey_button00.png"
+}
+images {
+  image: "/assets/images/grey_button15.png"
+}
+images {
+  image: "/assets/images/shadedDark47.png"
+}
+margin: 0
+extrude_borders: 4
+inner_padding: 0

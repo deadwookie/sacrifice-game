@@ -14,10 +14,10 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("proxy_unloaded") then
 		-- Ok, the world is unloaded...
 		load_start_screen(self)
-	elseif message_id == hash("load_level")) then
+	elseif message_id == hash("load_level") then
 		-- Load specific level
 		load_level(self, message["level_id"])
-	elseif message_id == hash("unload_level")) then
+	elseif message_id == hash("unload_level") then
 		-- Unload specific level
 		unload_level(self, message["level_id"])
 	end
