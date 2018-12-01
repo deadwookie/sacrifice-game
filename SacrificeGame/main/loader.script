@@ -11,15 +11,20 @@ function on_message(self, message_id, message, sender)
 		-- New world is loaded. Init and enable it.
 		msg.post(sender, "init")
 		msg.post(sender, "enable")
+		self.loaded_proxy = sender
 	elseif message_id == hash("proxy_unloaded") then
 		-- Ok, the world is unloaded...
 		load_start_screen(self)
 	elseif message_id == hash("load_level") then
+		-- Unload previously loaded level
+		if self.loaded_proxy then
+			unload_level(self, self.loaded_proxy)
+		end
 		-- Load specific level
-		load_level(self, message["level_id"])
+		load_level(self, get_proxy_name_by_level_id(self, message["level_id"]))
 	elseif message_id == hash("unload_level") then
 		-- Unload specific level
-		unload_level(self, message["level_id"])
+		unload_level(self, get_proxy_name_by_level_id(self, message["level_id"]))
 	end
 end
 
@@ -31,10 +36,12 @@ local function load_start_screen(self)
 	msg.post("#start_screen", "load")
 end
 
-local function load_level(self, level_id)
-	msg.post(get_proxy_name_by_level_id(self, level_id), "load")
+local function load_level(self, target)
+	msg.post(target, "load")
 end
 
-local function unload_level(self, level_id)
-	msg.post(get_proxy_name_by_level_id(self, level_id), "unload")
+local function unload_level(self, target)
+	msg.post(target, "disable")
+	msg.post(target, "final")
+	msg.post(target, "unload")
 end

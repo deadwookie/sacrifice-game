@@ -1,10 +1,6 @@
 function init(self)
 	msg.post("#", "acquire_input_focus")
-
-	self.buttons =  { "camera", "collision", "gui", "material", "spawning" }
-
-	self.loaded_proxy = nil	
-
+	self.buttons =  { "new_game", "about", "resume", "quit" }
 	-- On-screen controls off
 	msg.post("main:/controls#gui", "off")
 end
