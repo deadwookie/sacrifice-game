@@ -29,6 +29,7 @@ function on_message(self, message_id, message, sender)
 		-- New world is loaded. Init and enable it.
 		msg.post(sender, "init")
 		msg.post(sender, "enable")
+		msg.post(sender, "set_time_step", {factor = 1, mode = 1})
 		self.loaded_proxy = sender
 	elseif message_id == hash("proxy_unloaded") then
 		-- Ok, the world is unloaded...
@@ -53,5 +54,14 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("unload_level") then
 		-- Unload specific level
 		unload_level(self, get_proxy_name_by_level_id(message["level_id"]))
+
+	elseif message_id == hash("pause_level") then
+		if self.loaded_proxy then
+			msg.post(self.loaded_proxy, "set_time_step", {factor = 0, mode = 1})
+		end
+	elseif message_id == hash("resume_level") then
+		if self.loaded_proxy then
+			msg.post(self.loaded_proxy, "set_time_step", {factor = 1, mode = 1})
+		end
 	end
 end

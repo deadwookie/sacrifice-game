@@ -25,8 +25,18 @@ local function load_level(level_id)
 	msg.post("main:/loader#script", "load_level", { level_id = level_id })
 end
 
+local function pause_level()
+	msg.post("main:/loader#script", "pause_level")
+	msg.post("#", "show_menu")
+end
+
 local function resume_level()
 	msg.post("#", "hide_menu")
+	msg.post("main:/loader#script", "resume_level")
+end
+
+local function complete_level() 
+	msg.post("#", "show_menu")
 end
 
 function init(self)
@@ -66,11 +76,11 @@ function on_message(self, message_id, message, sender)
 	elseif message_id == hash("pause_level") then
 		self.resume_game_enabled = true
 		button_show("resume_game")
-		msg.post("#", "show_menu")
+		pause_level()
 	elseif message_id == hash("finish_level") then
 		self.resume_game_enabled = false
 		button_hide("resume_game")
-		msg.post("#", "show_menu")
+		complete_level()
 	elseif message_id == hash("disable_button") then
 		button_hide(message["button"])
 	end
