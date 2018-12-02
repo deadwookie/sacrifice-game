@@ -2,7 +2,7 @@
 title = SacrificeGame
 
 [bootstrap]
-main_collection = /main/main.collectionc
+main_collection = /main/war/war.collectionc
 
 [input]
 game_binding = /input/game.input_bindingc
