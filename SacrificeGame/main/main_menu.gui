@@ -1161,7 +1161,7 @@ nodes {
     w: 1.0
   }
   type: TYPE_TEMPLATE
-  id: "resume"
+  id: "resume_game"
   layer: ""
   inherit_alpha: true
   alpha: 1.0
@@ -1202,12 +1202,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "ui/grey_button00"
-  id: "resume/button_down"
+  id: "resume_game/button_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "resume"
+  parent: "resume_game"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -1258,7 +1258,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "RESUME GAME"
   font: "light"
-  id: "resume/label_down"
+  id: "resume_game/label_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -1276,7 +1276,7 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "resume/button_down"
+  parent: "resume_game/button_down"
   layer: ""
   inherit_alpha: false
   alpha: 1.0
@@ -1321,12 +1321,12 @@ nodes {
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
   texture: "ui/grey_button15"
-  id: "resume/button_up"
+  id: "resume_game/button_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
-  parent: "resume"
+  parent: "resume_game"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -1377,7 +1377,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "RESUME GAME"
   font: "light"
-  id: "resume/label_up"
+  id: "resume_game/label_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -1395,7 +1395,7 @@ nodes {
   }
   adjust_mode: ADJUST_MODE_FIT
   line_break: false
-  parent: "resume/button_up"
+  parent: "resume_game/button_up"
   layer: ""
   inherit_alpha: false
   alpha: 1.0
