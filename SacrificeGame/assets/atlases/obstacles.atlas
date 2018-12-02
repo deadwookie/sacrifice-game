@@ -37,6 +37,15 @@ images {
 images {
   image: "/assets/images/obstacles/TDS04_0021_Tree2.png"
 }
+images {
+  image: "/assets/images/obstacles/TDS04_0009_WatchTower.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0000_House01.png"
+}
+images {
+  image: "/assets/images/obstacles/BrokenBase.png"
+}
 margin: 0
 extrude_borders: 0
 inner_padding: 0

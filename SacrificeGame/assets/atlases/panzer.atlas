@@ -1,0 +1,9 @@
+images {
+  image: "/assets/images/panzer/PanzerBase.png"
+}
+images {
+  image: "/assets/images/panzer/PanzerTower.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

@@ -1,6 +1,6 @@
 tile_set: "/war/road.tilesource"
 layers {
-  id: "layer1"
+  id: "layer_road"
   z: 0.0
   is_visible: 1
   cell {
