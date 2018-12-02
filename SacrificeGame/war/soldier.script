@@ -1,0 +1,42 @@
+go.property("angular_velocity", 5)
+go.property("linear_velocity", 200)
+
+function init(self)
+	-- Add initialization code here
+	-- Remove this function if not needed
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+local fired = false
+
+function update(self, dt)
+	-- Add update code here
+	-- Remove this function if not needed
+	
+	local rotation = go.get_rotation()
+	local bullets = "#bulletfactory"
+
+	if fired==false then
+		factory.create(bullets, go.get_position() + vmath.rotate(rotation, vmath.vector3(-3, -17, 0)), rotation)
+		fired = true
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end
