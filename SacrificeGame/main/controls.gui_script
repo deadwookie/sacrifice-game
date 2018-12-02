@@ -28,7 +28,9 @@ function on_message(self, message_id, message, sender)
 		end 
 
 		msg.post("/sound#click", "play_sound")
-		if message.button == "back" then
+		if self.controls_receiver then
+			msg.post(self.controls_receiver, "action", {action = message.button})
+		elseif message.button == "back" then
 			msg.post("/main_menu#gui", "finish_level")
 		end
 	end
