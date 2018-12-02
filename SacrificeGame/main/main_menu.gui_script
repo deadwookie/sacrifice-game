@@ -73,7 +73,9 @@ function on_input(self, action_id, action)
 	elseif action_id == hash("click") and action.released then
 		-- Reset them
 		for i, b in pairs(self.buttons) do
-			button_unpress(b)
+			if b ~= "resume" or self.resume_enabled then
+				button_unpress(b)
+			end
 		end
 
 		for i, button in ipairs(self.buttons) do
