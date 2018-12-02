@@ -1,0 +1,42 @@
+images {
+  image: "/assets/images/obstacles/TDS04_0002_Sandbags.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0003_Rock03.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0004_Rock02.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0005_Rock01.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0011_Bush-02.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0013_Box-02.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0014_Box-02-mini.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0015_Barrel-oil.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0016_Barrel.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0017_Box1-mini.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0018_Box1.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0019_Tree4.png"
+}
+images {
+  image: "/assets/images/obstacles/TDS04_0021_Tree2.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
