@@ -1,7 +1,7 @@
 name: "default"
 instances {
   id: "hero"
-  prototype: "/main/war/hero.go"
+  prototype: "/war/hero.go"
   position {
     x: 138.0
     y: 194.0

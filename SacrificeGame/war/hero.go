@@ -1,7 +1,7 @@
 embedded_components {
   id: "head"
   type: "sprite"
-  data: "tile_set: \"/main/war/hero.atlas\"\n"
+  data: "tile_set: \"/assets/atlases/hero.atlas\"\n"
   "default_animation: \"idle\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
@@ -66,7 +66,7 @@ embedded_components {
 embedded_components {
   id: "legs"
   type: "sprite"
-  data: "tile_set: \"/main/war/hero_legs.atlas\"\n"
+  data: "tile_set: \"/assets/atlases/hero_legs.atlas\"\n"
   "default_animation: \"walk\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"

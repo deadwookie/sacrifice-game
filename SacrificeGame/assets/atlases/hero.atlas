@@ -1,13 +1,13 @@
 animations {
   id: "shot"
   images {
-    image: "/assets/chars/HPistolFire_01.png"
+    image: "/assets/images/chars/HPistolFire_01.png"
   }
   images {
-    image: "/assets/chars/HPistolFire_02.png"
+    image: "/assets/images/chars/HPistolFire_02.png"
   }
   images {
-    image: "/assets/chars/HPistolFire_03.png"
+    image: "/assets/images/chars/HPistolFire_03.png"
   }
   playback: PLAYBACK_ONCE_FORWARD
   fps: 12
@@ -17,7 +17,7 @@ animations {
 animations {
   id: "idle"
   images {
-    image: "/assets/chars/Hero_Pistol.png"
+    image: "/assets/images/chars/Hero_Pistol.png"
   }
   playback: PLAYBACK_NONE
   fps: 1
