@@ -1,62 +1,94 @@
+local function button_unpress(button)
+	gui.set_enabled(gui.get_node(button .. "/button_down"), false)
+	gui.set_enabled(gui.get_node(button .. "/button_up"), true)
+end
+
+local function button_press(button)
+	gui.set_enabled(gui.get_node(button .. "/button_down"), true)
+	gui.set_enabled(gui.get_node(button .. "/button_up"), false)
+end
+
+local function button_hide(button)
+	gui.set_enabled(gui.get_node(button .. "/button_down"), false)
+	gui.set_enabled(gui.get_node(button .. "/button_up"), false)
+end
+
+local function button_show(button)
+	button_unpress(button)
+end
+
+local function exit_game()
+	msg.post("@system:", "exit", {code = 0})
+end
+
+local function load_level(level_id) 
+	msg.post("main:/loader#script", "load_level", { level_id = level_id })
+end
+
 function init(self)
 	msg.post("#", "acquire_input_focus")
-	self.buttons =  { "new_game", "about", "resume", "quit" }
+	self.buttons =  { "new_game", "about", "resume", "exit_game" }
 	-- On-screen controls off
 	msg.post("main:/controls#gui", "off")
+
+	-- Disable Resume button
+	self.resume_enabled = false
+	msg.post("#", "disable_button", { button = "resume" })
 end
 
 function on_message(self, message_id, message, sender)
-    if message_id == hash("load_example") then
-	   	local proxy = message.proxy
-    	msg.post(proxy, "load")
-    elseif message_id == hash("proxy_loaded") then
-        -- The collection has loaded and it's time to enable it.
-        msg.post(sender, "enable")
+	if message_id == hash("proxy_loaded") then
 		self.pushed_button = nil		
 		-- Let the loaded collection take over.
-    	msg.post("#", "release_input_focus")
-    	-- Disable the main menu.
+		msg.post("#", "release_input_focus")
+		-- Disable the main menu.
 		msg.post("main_menu", "disable")
 
 		-- On-screen controls on
 		msg.post("main:/controls#gui", "on")
-
-		self.loaded_proxy = sender
 	elseif message_id == hash("back") then
 		-- Back to the main menu
-		msg.post(self.loaded_proxy, "disable")
-		msg.post(self.loaded_proxy, "final")
-		msg.post(self.loaded_proxy, "unload")
-
-		-- Reset things in the render script
-		msg.post("@render:", "clear_color", { color = vmath.vector4(0, 0, 0, 1) } )
-		msg.post("@render:", "no_camera")
-		msg.post("@render:", "set_render_update", { update = hash("2d") })
 		
-    	-- Enable the main menu.
+		-- Enable the main menu.
 		msg.post("main_menu", "enable")
-
 		-- On-screen controls off
 		msg.post("main:/controls#gui", "off")
-
 		-- Take back input.
-    	msg.post("#", "acquire_input_focus")
-    end
+		msg.post("#", "acquire_input_focus")
+	elseif message_id == hash("disable_button") then
+		button_hide(message["button"])
+	end
 end
 
 function on_input(self, action_id, action)
-	if action_id == hash("click") and action.pressed == true then
-		local x = action.x
-		local y = action.y
-		
-		for i, n in ipairs(self.buttons) do
-			if gui.pick_node(gui.get_node(n .. "/button" ), x, y) then
-				self.pushed_button = n
+	local x = action.x
+	local y = action.y
+	if action_id == hash("click") and action.pressed then
+		for i, b in pairs(self.buttons) do
+			if gui.pick_node(gui.get_node(b .. "/button_up"), x, y) then
 				msg.post("/sound#click", "play_sound")
-				msg.post("/loader#proxy-" .. n , "load")
+				button_press(b)
 			end
 		end
-	end	
+	elseif action_id == hash("click") and action.released then
+		-- Reset them
+		for i, b in pairs(self.buttons) do
+			button_unpress(b)
+		end
+
+		for i, button in ipairs(self.buttons) do
+			if gui.pick_node(gui.get_node(button .. "/button_down"), x, y) then
+				msg.post("/sound#release", "play_sound")
+				if button == "exit_game" then
+					exit_game()
+				elseif button == "about" then
+					load_level("about")
+				elseif button == hash("new_game") then
+					load_level(1)
+				end
+			end
+		end
+	end
 end
 
 function on_reload(self)
