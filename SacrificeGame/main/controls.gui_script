@@ -10,6 +10,8 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("aquire_controls") then
 		self.controls_receiver = sender
+	elseif message_id == hash("release_controls") then
+		self.controls_receiver = nil
 	elseif message_id == hash("on") then
 		msg.post("#", "acquire_input_focus")
 		msg.post("#", "show_controls")

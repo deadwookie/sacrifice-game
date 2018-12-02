@@ -4,8 +4,8 @@ function init(self)
 end
 
 function final(self)
-	-- Add finalization code here
-	-- Remove this function if not needed
+	-- Tell input controls to release redirect messages here
+	msg.post("main:/controls#gui", "release_controls")
 end
 
 function update(self, dt)
