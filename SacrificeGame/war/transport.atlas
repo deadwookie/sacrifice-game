@@ -1,0 +1,9 @@
+images {
+  image: "/assets/images/obstacles/Humvee_Broken_0003_\303\253\302\264\303\206\302\251-3.png"
+}
+images {
+  image: "/assets/images/obstacles/BTR_BrokenBase.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
