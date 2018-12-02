@@ -1,39 +1,5 @@
-function init(self)
-	msg.post(".", "acquire_input_focus")
-end
-
-function final(self)
-	msg.post(".", "release_input_focus")
-end
-
-function on_message(self, message_id, message, sender)
-	if message_id == hash("proxy_loaded") then
-		-- New world is loaded. Init and enable it.
-		msg.post(sender, "init")
-		msg.post(sender, "enable")
-		self.loaded_proxy = sender
-	elseif message_id == hash("proxy_unloaded") then
-		-- Ok, the world is unloaded...
-		load_start_screen(self)
-	elseif message_id == hash("load_level") then
-		-- Unload previously loaded level
-		if self.loaded_proxy then
-			unload_level(self, self.loaded_proxy)
-		end
-		-- Load specific level
-		load_level(self, get_proxy_name_by_level_id(self, message["level_id"]))
-	elseif message_id == hash("unload_level") then
-		-- Unload specific level
-		unload_level(self, get_proxy_name_by_level_id(self, message["level_id"]))
-	end
-end
-
-local function get_proxy_name_by_level_id(self, level_id)
+local function get_proxy_name_by_level_id(level_id)
 	return "#level_" .. level_id
-end
-
-local function load_start_screen(self)
-	msg.post("#start_screen", "load")
 end
 
 local function load_level(self, target)
@@ -44,4 +10,48 @@ local function unload_level(self, target)
 	msg.post(target, "disable")
 	msg.post(target, "final")
 	msg.post(target, "unload")
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.loaded_proxy = nil
+	self.proxy_to_load = nil
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("proxy_loaded") then
+		-- Disable main menu
+		msg.post("main:/main_menu#gui", "hide_menu")
+		-- New world is loaded. Init and enable it.
+		msg.post(sender, "init")
+		msg.post(sender, "enable")
+		self.loaded_proxy = sender
+	elseif message_id == hash("proxy_unloaded") then
+		-- Ok, the world is unloaded...
+		self.loaded_proxy = nil
+		if self.proxy_to_load then
+			msg.post("#", "load_level", { level_id = self.proxy_to_load })
+		else
+			-- There is no level to load, so just show the main menu
+			msg.post("main:/main_menu#gui", "finish_level")
+		end
+	elseif message_id == hash("load_level") then
+		if self.loaded_proxy then
+			self.proxy_to_load = message["level_id"]
+			-- We need to unload previous level first. Cache level to load to local variable
+			unload_level(self, self.loaded_proxy)
+		else
+			self.proxy_to_load = nil
+			-- Load specific level
+			load_level(self, get_proxy_name_by_level_id(message["level_id"]))
+		end
+		
+	elseif message_id == hash("unload_level") then
+		-- Unload specific level
+		unload_level(self, get_proxy_name_by_level_id(message["level_id"]))
+	end
 end

@@ -1,4 +1,4 @@
-name: "default"
+name: "level_1"
 collection_instances {
   id: "war"
   collection: "/war/war.collection"

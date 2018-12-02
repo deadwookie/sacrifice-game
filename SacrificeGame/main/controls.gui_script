@@ -1,5 +1,6 @@
 function init(self)
 	self.buttons = { "back" }
+	self.actions = { hash("move") }
 
 	self.controls_receiver = nil
 	self.controls_active = false
@@ -19,7 +20,7 @@ function on_message(self, message_id, message, sender)
 		self.controls_active = false
 	elseif message_id == hash("control_pressed") then
 		if message.button == "back" then
-			msg.post("/main_menu#gui", "back")
+			msg.post("/main_menu#gui", "pause_level")
 		end
 	end
 end
@@ -33,7 +34,7 @@ function on_input(self, action_id, action)
 			-- Search list for nodes to test against.
 			if gui.pick_node(gui.get_node(button), x, y) then
 				-- ignore "a" and "b" repeats
-			    if (button == "back") and not action.pressed then
+				if (button == "back") and not action.pressed then
 					return
 				end
 
