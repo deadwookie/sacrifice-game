@@ -7,6 +7,12 @@ images {
 images {
   image: "/assets/images/shadedDark47.png"
 }
+images {
+  image: "/assets/images/Button BG shadow.png"
+}
+images {
+  image: "/assets/images/Button BG.png"
+}
 margin: 0
 extrude_borders: 4
 inner_padding: 0

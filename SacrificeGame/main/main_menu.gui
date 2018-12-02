@@ -28,7 +28,7 @@ background_color {
 nodes {
   position {
     x: 512.0
-    y: 309.0
+    y: 384.0
     z: 0.0
     w: 1.0
   }
@@ -46,7 +46,7 @@ nodes {
   }
   size {
     x: 1024.0
-    y: 1024.0
+    y: 768.0
     z: 0.0
     w: 1.0
   }
@@ -58,441 +58,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "background/sky"
-  id: "sky"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 0.0
-    y: -11.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 1024.0
-    y: 252.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: "background/clouds2"
-  id: "clouds1"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  parent: "sky"
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 0.0
-    y: -116.258
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 1024.0
-    y: 211.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: "background/clouds1"
-  id: "clouds"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  parent: "sky"
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 508.753
-    y: 248.11
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 9.16732
-    w: 1.0
-  }
-  scale {
-    x: 0.5
-    y: 0.5
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 286.0
-    y: 306.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: "background/mountain1"
-  id: "mountain"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 859.892
-    y: 271.519
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 0.8
-    y: 0.8
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 249.0
-    y: 242.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: "background/mountain2"
-  id: "mountain1"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 643.356
-    y: 361.645
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 0.8
-    y: 0.8
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 245.0
-    y: 397.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: "background/mountain3"
-  id: "mountain2"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 832.0
-    y: 698.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 0.8
-    y: 0.8
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 87.0
-    y: 86.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: "background/sun"
-  id: "sun"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 512.0
-    y: 181.0
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 1024.0
-    y: 131.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: "background/hills1"
-  id: "hills"
-  xanchor: XANCHOR_NONE
-  yanchor: YANCHOR_NONE
-  pivot: PIVOT_CENTER
-  adjust_mode: ADJUST_MODE_FIT
-  layer: ""
-  inherit_alpha: true
-  slice9 {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 0.0
-  }
-  clipping_mode: CLIPPING_MODE_NONE
-  clipping_visible: true
-  clipping_inverted: false
-  alpha: 1.0
-  template_node_child: false
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 512.0
-    y: -116.176
-    z: 0.0
-    w: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  size {
-    x: 1024.0
-    y: 512.0
-    z: 0.0
-    w: 1.0
-  }
-  color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-    w: 1.0
-  }
-  type: TYPE_BOX
-  blend_mode: BLEND_MODE_ALPHA
-  texture: "background/ground"
+  texture: "background/Background"
   id: "ground"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -511,7 +77,7 @@ nodes {
   clipping_inverted: false
   alpha: 1.0
   template_node_child: false
-  size_mode: SIZE_MODE_AUTO
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -539,9 +105,9 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.4
+    x: 0.7019608
     y: 0.4
-    z: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
@@ -553,15 +119,15 @@ nodes {
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
@@ -569,8 +135,8 @@ nodes {
   layer: ""
   inherit_alpha: false
   alpha: 1.0
-  outline_alpha: 0.0
-  shadow_alpha: 0.0
+  outline_alpha: 1.0
+  shadow_alpha: 1.0
   template_node_child: false
   text_leading: 1.0
   text_tracking: 0.0
@@ -647,7 +213,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "ui/grey_button00"
+  texture: "ui/Button BG"
   id: "new_game/button_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -695,29 +261,29 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.7019608
+    y: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "NEW GAME"
-  font: "light"
+  font: "semibold"
   id: "new_game/label_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
@@ -766,7 +332,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "ui/grey_button15"
+  texture: "ui/Button BG shadow"
   id: "new_game/button_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -814,29 +380,29 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.7019608
+    y: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "NEW GAME"
-  font: "light"
+  font: "semibold"
   id: "new_game/label_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
@@ -924,7 +490,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "ui/grey_button00"
+  texture: "ui/Button BG"
   id: "about/button_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -972,29 +538,29 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.7019608
+    y: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "ABOUT"
-  font: "light"
+  font: "semibold"
   id: "about/label_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
@@ -1043,7 +609,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "ui/grey_button15"
+  texture: "ui/Button BG shadow"
   id: "about/button_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -1091,29 +657,29 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.7019608
+    y: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "ABOUT"
-  font: "light"
+  font: "semibold"
   id: "about/label_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
@@ -1201,7 +767,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "ui/grey_button00"
+  texture: "ui/Button BG"
   id: "resume_game/button_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -1249,29 +815,29 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.7019608
+    y: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "RESUME GAME"
-  font: "light"
+  font: "semibold"
   id: "resume_game/label_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
@@ -1320,7 +886,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "ui/grey_button15"
+  texture: "ui/Button BG shadow"
   id: "resume_game/button_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -1368,29 +934,29 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.7019608
+    y: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "RESUME GAME"
-  font: "light"
+  font: "semibold"
   id: "resume_game/label_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
@@ -1478,7 +1044,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "ui/grey_button00"
+  texture: "ui/Button BG"
   id: "exit_game/button_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -1526,29 +1092,29 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.7019608
+    y: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "EXIT"
-  font: "light"
+  font: "semibold"
   id: "exit_game/label_down"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
@@ -1597,7 +1163,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "ui/grey_button15"
+  texture: "ui/Button BG shadow"
   id: "exit_game/button_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -1645,29 +1211,29 @@ nodes {
     w: 1.0
   }
   color {
-    x: 0.36078432
-    y: 0.34901962
-    z: 0.36862746
+    x: 0.7019608
+    y: 0.4
+    z: 0.101960786
     w: 1.0
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "EXIT"
-  font: "light"
+  font: "semibold"
   id: "exit_game/label_up"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   outline {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.8
+    y: 0.5019608
+    z: 0.2
     w: 1.0
   }
   shadow {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.9019608
+    y: 0.6
+    z: 0.3019608
     w: 1.0
   }
   adjust_mode: ADJUST_MODE_FIT
