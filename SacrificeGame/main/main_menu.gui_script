@@ -39,11 +39,14 @@ function init(self)
 	-- Disable Resume button
 	self.resume_game_enabled = false
 	msg.post("#", "disable_button", { button = "resume_game" })
+
+	msg.post("/sound#menu_theme", "play_sound")
 end
 
 function on_message(self, message_id, message, sender)
 	-- Level loaded, so hide the main menu
 	if message_id == hash("hide_menu") then
+		msg.post("/sound#menu_theme", "stop_sound")
 		-- Let the loaded collection take over.
 		msg.post("#", "release_input_focus")
 		-- Disable the main menu.
@@ -59,6 +62,7 @@ function on_message(self, message_id, message, sender)
 		msg.post("main:/controls#gui", "off")
 		-- Take back input.
 		msg.post("#", "acquire_input_focus")
+		msg.post("/sound#menu_theme", "play_sound")
 	elseif message_id == hash("pause_level") then
 		self.resume_game_enabled = true
 		button_show("resume_game")
