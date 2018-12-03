@@ -1,19 +1,26 @@
-go.property("linear_velocity", 100)
+go.property("spot", 0)
+
+local function get_spot_url(spot_ind)
+	return msg.url("level_1", "/war/spot_" .. spot_ind, hash("spot"))
+end
 
 function init(self)
-	self.move_to_spot = nil
 	self.moving = false
 end
 
-function go_to(self, dt)
+local function go_to(self, move_to_ind)
 	self.moving = true
-	local targetPos = go.get_position(self.move_to_spot)
-	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_INCUBIC, 2)
+	local targetPos = go.get_position(get_spot_url(move_to_ind))
+	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_INCUBIC, 2, 0, function ()
+		self.spot = move_to_ind
+		self.moving = false
+	end)
 end
 
 function on_message(self, message_id, message, sender)
 	if (message_id == hash("move_to") and not self.moving) then
-		self.move_to_spot = message["spot"]
-		go_to(self, self.move_to_spot)
+		go_to(self, message["spot"])
+	elseif (message_id == hash("move_next") and not self.moving) then
+		go_to(self, go.get(get_spot_url(self.spot), "next_spot"))
 	end
 end
