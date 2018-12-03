@@ -1,10 +1,23 @@
+local function mute(self)
+	self.is_muted = true
+	sound.set_group_gain(hash("master"), 0)
+end
+
+local function unmute(self)
+	self.is_muted = false
+	sound.set_group_gain(hash("master"), self.master_gain)
+end
+
 function init(self)
 	self.buttons = { hash("back"), hash("mute") }
 	self.actions = { hash("move"), hash("back") }
 
 	self.controls_receiver = nil
 	self.controls_active = false
+	self.is_muted = false
+	self.master_gain = sound.get_group_gain(hash("master"))
 	msg.post("#", "hide_controls")
+	msg.post("#", "acquire_input_focus")
 end
 
 function on_message(self, message_id, message, sender)
@@ -16,7 +29,7 @@ function on_message(self, message_id, message, sender)
 		msg.post("#", "acquire_input_focus")
 		msg.post("#", "show_controls")
 	elseif message_id == hash("off") then
-		msg.post("#", "release_input_focus")
+		-- msg.post("#", "release_input_focus")
 		msg.post("#", "hide_controls")
 	elseif message_id == hash("show_controls") then
 		gui.set_enabled(gui.get_node("back"), true)
@@ -25,6 +38,11 @@ function on_message(self, message_id, message, sender)
 		gui.set_enabled(gui.get_node("back"), false)
 		self.controls_active = false
 	elseif message_id == hash("control_pressed") then
+		if message.button == hash("mute") then
+			if self.is_muted then unmute(self) else mute(self) end
+			return
+		end
+		
 		if not self.controls_active then
 			return
 		end 
@@ -46,8 +64,8 @@ function on_input(self, action_id, action)
 		for i, button in ipairs(self.buttons) do
 			-- Search list for nodes to test against.
 			if gui.pick_node(gui.get_node(button), x, y) then
-				-- ignore "a" and "b" repeats
-				if (button == "back") and not action.pressed then
+				-- ignore repeats
+				if (button == hash("back") or button == hash("mute")) and not action.pressed then
 					return
 				end
 
