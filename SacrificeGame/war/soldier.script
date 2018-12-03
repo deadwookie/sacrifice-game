@@ -11,31 +11,30 @@ function init(self)
 	-- This will print the game objects’ absolute urls, and from those you can work out how to address them from one another
 	
 	self.didShot = false
-	self.mayShot = not self.wait_enemyspotted
+	self.mayShoot = not self.wait_enemyspotted
 	self.burstFired = 0
-	init_shooting(self)
+	shoot(self)
 	--print(msg.url())
-end
-
-function init_shooting(self)
-	if not self.fire_tid then
-		self.fire_tid = timer.delay(self.fire_interval, false, shoot)
-	end
 end
 
 function shoot(self)
 	--print(self.burstFired)
+	if not self.mayShoot then
+		return
+	end
+
+	self.isShooting = true
 	
 	if self.burstFired < self.burst then
 		self.didShot = true
 		self.burstFired = self.burstFired + 1
 	end
 
-	if (self.burstFired == self.burst) then
+	if self.burstFired == self.burst then
 		self.burstFired = 0
-		self.fire_tid = timer.delay(self.fire_interval, false, shoot)
-	else
-		self.burst_tid = timer.delay(self.burst_interval, false, shoot)
+		timer.delay(self.fire_interval, false, shoot)
+	elseif self.didShot then
+		timer.delay(self.burst_interval, false, shoot)
 	end
 end
 
@@ -49,12 +48,13 @@ function update(self, dt)
 	-- Remove this function if not needed
 	
 	local rotation = go.get_rotation()
-	if self.didShot == true then
+	if self.didShot then
 		msg.post("#fire", "enable")
 		msg.post("#soldier", "play_animation", {id = hash("fire_gun")})
 		factory.create("#bulletfactory", go.get_position() + vmath.rotate(rotation, vmath.vector3(-3, -17, 0)), rotation)
 		self.didShot = false
 	end
+		
 end
 
 function on_message(self, message_id, message, sender)
@@ -62,7 +62,10 @@ function on_message(self, message_id, message, sender)
 	-- Remove this function if not needed
 	
 	if message_id == hash("enemyspotted") then
-		self.mayShot = true
+		self.mayShoot = true
+		if not self.isShooting then
+			shoot(self)
+		end
 	elseif message_id == hash("animation_done") then
 		msg.post("#fire", "disable")
 		msg.post("#soldier", "play_animation", {id = hash("idle_gun")})
