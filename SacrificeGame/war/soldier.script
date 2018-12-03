@@ -51,6 +51,7 @@ function update(self, dt)
 	if self.didShot then
 		msg.post("#fire", "enable")
 		msg.post("#fire", "play_animation", {id = hash("fire")})
+		msg.post("#soldier", "play_animation", {id = hash("fire_gun")})
 		factory.create("#bulletfactory", go.get_position() + vmath.rotate(rotation, vmath.vector3(-3, -17, 0)), rotation)
 		self.didShot = false
 	end
@@ -61,7 +62,6 @@ function on_message(self, message_id, message, sender)
 	-- Add message-handling code here
 	-- Remove this function if not needed
 
-	print(message_id)
 	if message_id == hash("enemyspotted") then
 		self.mayShoot = true
 		if not self.isShooting then
@@ -69,8 +69,7 @@ function on_message(self, message_id, message, sender)
 		end
 	elseif message_id == hash("animation_done") then
 		msg.post("#fire", "disable")
-		--msg.post("#soldier", "play_animation", {id = hash("idle_gun")})
-		--msg.post(".", "play_animation", {id = hash("idle_gun")})
+		msg.post("#soldier", "play_animation", {id = hash("idle_gun")})
 	end
 end
 
