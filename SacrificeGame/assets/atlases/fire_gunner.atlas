@@ -1,19 +1,19 @@
 images {
-  image: "/assets/images/fire/gunner/GunnerBullet.png"
+  image: "/assets/images/chars/gun_fire/GunnerBullet.png"
 }
 animations {
   id: "fire"
   images {
-    image: "/assets/images/fire/gunner/1.png"
+    image: "/assets/images/chars/gun_fire/1.png"
   }
   images {
-    image: "/assets/images/fire/gunner/2.png"
+    image: "/assets/images/chars/gun_fire/2.png"
   }
   images {
-    image: "/assets/images/fire/gunner/3.png"
+    image: "/assets/images/chars/gun_fire/3.png"
   }
   playback: PLAYBACK_ONCE_FORWARD
-  fps: 14
+  fps: 18
   flip_horizontal: 0
   flip_vertical: 0
 }

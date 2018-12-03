@@ -56,8 +56,8 @@ instances {
   id: "soldier_bazooka"
   prototype: "/war/soldier_bazooka.go"
   position {
-    x: 552.0
-    y: 226.0
+    x: 786.0
+    y: 418.0
     z: 0.0
   }
   rotation {
@@ -125,6 +125,19 @@ instances {
     y: 0.0
     z: 0.0
     w: 1.0
+  }
+  component_properties {
+    id: "soldier1"
+    properties {
+      id: "burst"
+      value: "10.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "fire_interval"
+      value: "3.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
   }
   scale3 {
     x: 1.0
@@ -687,6 +700,39 @@ instances {
     properties {
       id: "next_spot"
       value: "17.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "soldier_gun2"
+  prototype: "/war/soldier_gun.go"
+  position {
+    x: 548.0
+    y: 222.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.25881904
+    w: 0.9659258
+  }
+  component_properties {
+    id: "soldier1"
+    properties {
+      id: "burst"
+      value: "1.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "burst_interval"
+      value: "0.3"
       type: PROPERTY_TYPE_NUMBER
     }
   }

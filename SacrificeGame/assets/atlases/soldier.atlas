@@ -50,7 +50,7 @@ animations {
 animations {
   id: "fire_gun"
   images {
-    image: "/assets/images/fire/gunner/GunnerShot.png"
+    image: "/assets/images/chars/GunnerShot.png"
   }
   playback: PLAYBACK_NONE
   fps: 1

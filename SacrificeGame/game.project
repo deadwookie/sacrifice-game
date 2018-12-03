@@ -23,3 +23,6 @@ app_icon = /assets/appicons/appicon.ico
 [osx]
 app_icon = /assets/appicons/appicon.icns
 
+[sound]
+gain = 0.5
+

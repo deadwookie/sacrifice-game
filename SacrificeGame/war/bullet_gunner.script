@@ -1,4 +1,4 @@
-go.property("linear_velocity", 50)
+go.property("linear_velocity", 150)
 
 -- local W = tonumber(sys.get_config("display.width"))
 -- local H = tonumber(sys.get_config("display.height"))
