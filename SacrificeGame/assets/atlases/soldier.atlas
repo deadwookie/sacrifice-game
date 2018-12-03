@@ -52,7 +52,7 @@ animations {
   images {
     image: "/assets/images/fire/gunner/GunnerShot.png"
   }
-  playback: PLAYBACK_ONCE_FORWARD
+  playback: PLAYBACK_NONE
   fps: 60
   flip_horizontal: 0
   flip_vertical: 0
