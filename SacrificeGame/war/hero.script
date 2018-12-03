@@ -2,7 +2,7 @@ go.property("spot", 0)
 go.property("linear_velocity", 150)
 
 local function get_spot_url(spot_ind)
-	return msg.url("level_1", "/war/spot_" .. spot_ind, hash("spot"))
+	return msg.url("level_1", "/war/spots/spot_" .. spot_ind, hash("spot"))
 end
 
 function init(self)

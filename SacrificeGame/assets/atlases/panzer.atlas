@@ -1,8 +1,8 @@
 images {
-  image: "/assets/images/panzer/PanzerBase.png"
+  image: "/assets/images/transport/panzer/PanzerBase.png"
 }
 images {
-  image: "/assets/images/panzer/PanzerTower.png"
+  image: "/assets/images/transport/panzer/PanzerTower.png"
 }
 margin: 0
 extrude_borders: 0

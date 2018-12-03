@@ -1,14 +1,14 @@
 images {
-  image: "/assets/images/helicopter/Helicopter_Base.png"
+  image: "/assets/images/transport/helicopter/Helicopter_Base.png"
 }
 images {
-  image: "/assets/images/helicopter/Helicopter_Screw.png"
+  image: "/assets/images/transport/helicopter/Helicopter_Screw.png"
 }
 images {
-  image: "/assets/images/helicopter/Helicopter_Screw_4x.png"
+  image: "/assets/images/transport/helicopter/Helicopter_Screw_4x.png"
 }
 images {
-  image: "/assets/images/helicopter/BrokenBase.png"
+  image: "/assets/images/transport/helicopter/BrokenBase.png"
 }
 margin: 0
 extrude_borders: 0

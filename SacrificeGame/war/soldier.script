@@ -2,6 +2,7 @@ go.property("angular_range", 20)
 go.property("angular_velocity", 10)
 -- go.property("linear_velocity", 200)
 go.property("burst", 1)
+go.property("delay", 0)
 go.property("burst_interval", 0.1)
 go.property("fire_interval", 1.5)
 go.property("wait_enemyspotted", false)
@@ -44,7 +45,11 @@ function init(self)
 	self.mayShoot = not self.wait_enemyspotted
 	self.burstFired = 0
 	self.observeDir = math.random(0, 1) and 1 or -1
-	shoot(self)
+	if self.delay then
+		timer.delay(self.delay, false, shoot)
+	else
+		shoot(self)
+	end
 	--print(msg.url())
 end
 
@@ -76,7 +81,11 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("enemyspotted") then
 		self.mayShoot = true
 		if not self.isShooting then
-			shoot(self)
+			if self.delay then
+				timer.delay(self.delay, false, shoot)
+			else
+				shoot(self)
+			end
 		end
 	elseif message_id == hash("animation_done") then
 		msg.post("#fire", "disable")
