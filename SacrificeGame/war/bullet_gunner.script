@@ -1,11 +1,7 @@
 go.property("linear_velocity", 50)
 
-local W = tonumber(sys.get_config("display.width"))
-local H = tonumber(sys.get_config("display.height"))
-
-function init(self)
-	print("fire init")
-end
+-- local W = tonumber(sys.get_config("display.width"))
+-- local H = tonumber(sys.get_config("display.height"))
 
 function update(self, dt)
 	local rotation = go.get_rotation()
@@ -13,6 +9,10 @@ function update(self, dt)
 	local direction = vmath.rotate(rotation, vmath.vector3(0, -distance, 0))
 	local position = go.get_position() + direction
 	go.set_position(position)
+
+	if (position.y < 0) then
+		go.delete()
+	end
 end
 
 function on_message(self, message_id, message, sender)

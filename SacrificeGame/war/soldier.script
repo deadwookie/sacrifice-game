@@ -1,13 +1,42 @@
-go.property("angular_velocity", 5)
-go.property("linear_velocity", 200)
+-- go.property("angular_velocity", 5)
+-- go.property("linear_velocity", 200)
+go.property("burst", 1)
+go.property("burst_interval", 0.1)
+go.property("fire_interval", 1.5)
+go.property("wait_enemyspotted", false)
 
 function init(self)
 	-- Add initialization code here
 	-- Remove this function if not needed
 	-- This will print the game objects’ absolute urls, and from those you can work out how to address them from one another
 	
-	self.didshot = false
-	print(msg.url())
+	self.didShot = false
+	self.mayShot = not self.wait_enemyspotted
+	self.burstFired = 0
+	init_shooting(self)
+	--print(msg.url())
+end
+
+function init_shooting(self)
+	if not self.fire_tid then
+		self.fire_tid = timer.delay(self.fire_interval, false, shoot)
+	end
+end
+
+function shoot(self)
+	--print(self.burstFired)
+	
+	if self.burstFired < self.burst then
+		self.didShot = true
+		self.burstFired = self.burstFired + 1
+	end
+
+	if (self.burstFired == self.burst) then
+		self.burstFired = 0
+		self.fire_tid = timer.delay(self.fire_interval, false, shoot)
+	else
+		self.burst_tid = timer.delay(self.burst_interval, false, shoot)
+	end
 end
 
 function final(self)
@@ -20,12 +49,11 @@ function update(self, dt)
 	-- Remove this function if not needed
 	
 	local rotation = go.get_rotation()
-	local bullets = "#bulletfactory"
-	if self.didshot == false then
+	if self.didShot == true then
 		msg.post("#fire", "enable")
 		msg.post("#soldier", "play_animation", {id = hash("fire_gun")})
-		factory.create(bullets, go.get_position() + vmath.rotate(rotation, vmath.vector3(-3, -17, 0)), rotation)
-		self.didshot = true
+		factory.create("#bulletfactory", go.get_position() + vmath.rotate(rotation, vmath.vector3(-3, -17, 0)), rotation)
+		self.didShot = false
 	end
 end
 
@@ -34,7 +62,7 @@ function on_message(self, message_id, message, sender)
 	-- Remove this function if not needed
 	
 	if message_id == hash("enemyspotted") then
-		self.didshot = false
+		self.mayShot = true
 	elseif message_id == hash("animation_done") then
 		msg.post("#fire", "disable")
 		msg.post("#soldier", "play_animation", {id = hash("idle_gun")})
