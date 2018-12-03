@@ -54,7 +54,7 @@ embedded_components {
 embedded_components {
   id: "fire"
   type: "sprite"
-  data: "tile_set: \"/assets/atlases/fire_gunner.atlas\"\n"
+  data: "tile_set: \"/assets/atlases/gun_fire.atlas\"\n"
   "default_animation: \"fire\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"

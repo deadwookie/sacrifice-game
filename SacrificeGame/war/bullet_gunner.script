@@ -1,4 +1,5 @@
 go.property("linear_velocity", 150)
+go.property("killing_force", 2)
 
 -- local W = tonumber(sys.get_config("display.width"))
 -- local H = tonumber(sys.get_config("display.height"))
@@ -16,7 +17,7 @@ function update(self, dt)
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("collision_response") and message.group == hash("wall") then
+	if message_id == hash("collision_response") then
 		go.delete()
 	end
 end

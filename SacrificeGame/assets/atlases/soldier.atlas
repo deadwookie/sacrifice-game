@@ -11,16 +11,16 @@ animations {
 animations {
   id: "die"
   images {
-    image: "/assets/images/chars/deaths/SD_01.png"
+    image: "/assets/images/chars/gunner_death/SD_01.png"
   }
   images {
-    image: "/assets/images/chars/deaths/SD_02.png"
+    image: "/assets/images/chars/gunner_death/SD_02.png"
   }
   images {
-    image: "/assets/images/chars/deaths/SD_03.png"
+    image: "/assets/images/chars/gunner_death/SD_03.png"
   }
   images {
-    image: "/assets/images/chars/deaths/SD_04.png"
+    image: "/assets/images/chars/gunner_death/SD_04.png"
   }
   playback: PLAYBACK_ONCE_FORWARD
   fps: 12

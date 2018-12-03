@@ -8,9 +8,14 @@ end
 function init(self)
 	msg.post("#legs", "disable")
 	self.moving = false
+	self.alive = true
 end
 
 local function go_to(self, move_to_ind)
+	if not self.alive then
+		return
+	end
+	
 	self.moving = true
 	local pos = go.get_position()
 	local targetPos = go.get_position(get_spot_url(move_to_ind))
@@ -27,10 +32,41 @@ local function go_to(self, move_to_ind)
 	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, targetAngle, go.EASING_INQUINT, t / 4, 0)
 end
 
+local function die(self, from)
+	self.alive = false
+	msg.post("#legs", "disable")
+	msg.post("#collisionobject", "disable")
+	msg.post("#death", "play_sound")
+
+	-- where the corpse flies?
+	local selfAngle = go.get(".", "euler.z")
+	local bulletAngle = go.get(from, "euler.z")
+	print(selfAngle, bulletAngle)
+	local angle = math.random(bulletAngle, selfAngle) - 90
+	
+	local x = math.cos(math.rad(angle))
+	local y = math.sin(math.rad(angle))
+	local targetPos = go.get_position()
+
+	local shift = go.get(msg.url(nil, from, hash("script")), "killing_force") * 20
+	targetPos.x = targetPos.x - x * shift
+	targetPos.y = targetPos.y + y * shift
+
+	local t = shift / self.linear_velocity
+	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_LINEAR, t, 0)
+	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, angle - 90, go.EASING_INQUINT, t / 4, 0)
+	
+	sprite.play_flipbook("#head", "die", function (self, message_id) 
+		print(message_id, 'HEADSHOT!')
+	end)
+end
+
 function on_message(self, message_id, message, sender)
-	if (message_id == hash("move_to") and not self.moving) then
+	if message_id == hash("move_to") and not self.moving then
 		go_to(self, message["spot"])
-	elseif (message_id == hash("move_next") and not self.moving) then
+	elseif message_id == hash("move_next") and not self.moving then
 		go_to(self, go.get(get_spot_url(self.spot), "next_spot"))
+	elseif message_id == hash("collision_response") and message.group == hash("bullet") then
+		die(self, message.other_id)
 	end
 end

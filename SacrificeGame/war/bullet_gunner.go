@@ -1,5 +1,5 @@
 components {
-  id: "bullet_gunner"
+  id: "script"
   component: "/war/bullet_gunner.script"
   position {
     x: 0.0
@@ -16,7 +16,7 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/assets/atlases/fire_gunner.atlas\"\n"
+  data: "tile_set: \"/assets/atlases/gun_fire.atlas\"\n"
   "default_animation: \"GunnerBullet\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
@@ -43,6 +43,7 @@ embedded_components {
   "restitution: 0.5\n"
   "group: \"bullet\"\n"
   "mask: \"wall\"\n"
+  "mask: \"hero\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
