@@ -16,9 +16,6 @@ local function go_to(self, move_to_ind)
 	local t = vmath.length(targetPos - pos) / self.linear_velocity
 	local angle = go.get(".", "euler.z")
 	local targetAngle = (math.pi / 2 + math.atan2(targetPos.y - pos.y, targetPos.x - pos.x)) * 180 / math.pi
-
-	if  then
-	end
 	
 	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_LINEAR, t, 0, function ()
 		self.spot = move_to_ind
