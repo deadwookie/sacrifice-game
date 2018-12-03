@@ -189,7 +189,7 @@ embedded_instances {
   "  data: \"sound: \\\"/assets/sounds/main menu theme.wav\\\"\\n"
   "looping: 1\\n"
   "group: \\\"master\\\"\\n"
-  "gain: 1.0\\n"
+  "gain: 0.1\\n"
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
