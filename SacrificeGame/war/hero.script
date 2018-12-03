@@ -6,6 +6,7 @@ local function get_spot_url(spot_ind)
 end
 
 function init(self)
+	msg.post("#legs", "disable")
 	self.moving = false
 end
 
@@ -16,10 +17,12 @@ local function go_to(self, move_to_ind)
 	local t = vmath.length(targetPos - pos) / self.linear_velocity
 	local angle = go.get(".", "euler.z")
 	local targetAngle = (math.pi / 2 + math.atan2(targetPos.y - pos.y, targetPos.x - pos.x)) * 180 / math.pi
-	
+
+	msg.post("#legs", "enable")
 	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_LINEAR, t, 0, function ()
 		self.spot = move_to_ind
 		self.moving = false
+		msg.post("#legs", "disable")
 	end)
 	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, targetAngle, go.EASING_INQUINT, t / 4, 0)
 end

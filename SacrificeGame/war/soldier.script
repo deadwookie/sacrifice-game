@@ -37,6 +37,7 @@ local function fire(self)
 end
 
 function init(self)
+	msg.post("#fire", "disable")
 	self.didShot = false
 	self.mayShoot = not self.wait_enemyspotted
 	self.burstFired = 0

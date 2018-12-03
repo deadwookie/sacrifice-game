@@ -1,3 +1,6 @@
+images {
+  image: "/assets/images/spot.png"
+}
 animations {
   id: "shot"
   images {
