@@ -83,8 +83,8 @@ instances {
   id: "panzer"
   prototype: "/war/panzer.go"
   position {
-    x: 970.0
-    y: 566.0
+    x: 1350.0
+    y: 327.0
     z: 0.0
   }
   rotation {
@@ -152,6 +152,26 @@ instances {
     y: 0.0
     z: 0.25881904
     w: 0.9659258
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "helicopter"
+  prototype: "/war/helicopter.go"
+  position {
+    x: 1304.0
+    y: 647.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
   }
   scale3 {
     x: 1.0
@@ -630,7 +650,7 @@ embedded_instances {
   data: "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/war/transport.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/assets/atlases/transport.atlas\\\"\\n"
   "default_animation: \\\"Humvee_Broken_0003_\\\\303\\\\253\\\\302\\\\264\\\\303\\\\206\\\\302\\\\251-3\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
@@ -649,8 +669,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 785.0
-    y: 319.0
+    x: 1512.0
+    y: 188.0
     z: 0.2
   }
   rotation {
@@ -670,7 +690,7 @@ embedded_instances {
   data: "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/war/transport.atlas\\\"\\n"
+  "  data: \"tile_set: \\\"/assets/atlases/transport.atlas\\\"\\n"
   "default_animation: \\\"BTR_BrokenBase\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
@@ -689,8 +709,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 513.0
-    y: 351.0
+    x: 1464.0
+    y: 447.0
     z: 0.2
   }
   rotation {
@@ -916,8 +936,8 @@ embedded_instances {
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
-  "    x: 300.0\n"
-  "    y: 459.0\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
   "    z: 0.0\n"
   "  }\n"
   "  rotation {\n"
@@ -929,8 +949,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 0.0
-    y: 0.0
+    x: 1167.0
+    y: 902.0
     z: 0.0
   }
   rotation {
@@ -1036,8 +1056,8 @@ embedded_instances {
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
   "  position {\n"
-  "    x: 856.0\n"
-  "    y: 657.0\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
   "    z: 0.0\n"
   "  }\n"
   "  rotation {\n"
@@ -1049,48 +1069,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-embedded_instances {
-  id: "helicopter_broken"
-  data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/assets/atlases/obstacles.atlas\\\"\\n"
-  "default_animation: \\\"BrokenBase\\\"\\n"
-  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 1007.0\n"
-  "    y: 288.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.25881904\n"
-  "    w: 0.9659258\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-    x: 0.0
-    y: 0.0
+    x: 1532.0
+    y: 706.0
     z: 0.0
   }
   rotation {
