@@ -9,7 +9,7 @@ animations {
   flip_vertical: 0
 }
 animations {
-  id: "die"
+  id: "die_gun"
   images {
     image: "/assets/images/chars/gunner_death/SD_01.png"
   }
@@ -50,10 +50,51 @@ animations {
 animations {
   id: "fire_gun"
   images {
-    image: "/assets/images/chars/GunnerShot.png"
+    image: "/assets/images/chars/gun_fire/GunnerShot.png"
   }
   playback: PLAYBACK_NONE
   fps: 1
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "die_bazooka"
+  images {
+    image: "/assets/images/chars/bazooka_death/SD2_01.png"
+  }
+  images {
+    image: "/assets/images/chars/bazooka_death/SD2_02.png"
+  }
+  images {
+    image: "/assets/images/chars/bazooka_death/SD2_03.png"
+  }
+  images {
+    image: "/assets/images/chars/bazooka_death/SD2_04.png"
+  }
+  playback: PLAYBACK_ONCE_FORWARD
+  fps: 12
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "fire_bazooka"
+  images {
+    image: "/assets/images/chars/bazooka_fire/SF_01.png"
+  }
+  images {
+    image: "/assets/images/chars/bazooka_fire/SF_02.png"
+  }
+  images {
+    image: "/assets/images/chars/bazooka_fire/SF_03.png"
+  }
+  images {
+    image: "/assets/images/chars/bazooka_fire/SF_04.png"
+  }
+  images {
+    image: "/assets/images/chars/bazooka_fire/SF_05.png"
+  }
+  playback: PLAYBACK_ONCE_FORWARD
+  fps: 12
   flip_horizontal: 0
   flip_vertical: 0
 }
