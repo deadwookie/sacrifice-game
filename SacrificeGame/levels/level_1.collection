@@ -24,7 +24,7 @@ embedded_instances {
   id: "controller"
   data: "components {\n"
   "  id: \"hero\"\n"
-  "  component: \"/levels/level_1/hero.script\"\n"
+  "  component: \"/levels/level_1/controller.script\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"

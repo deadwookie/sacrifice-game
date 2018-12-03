@@ -1,6 +1,6 @@
 components {
   id: "script"
-  component: "/levels/level_1/hero.script"
+  component: "/war/hero.script"
   position {
     x: 0.0
     y: 0.0

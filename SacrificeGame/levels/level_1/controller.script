@@ -19,6 +19,7 @@ function on_message(self, message_id, message, sender)
 			msg.post("main:/main_menu#gui", "pause_level")
 		elseif message["action"] == hash("move") then
 			print("Move-move-move")
+			msg.post("level_1:/war/hero", "move_to", {spot = "level_1:/war/spot_1"})
 		end
 	end
 end

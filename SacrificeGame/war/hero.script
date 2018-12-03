@@ -1,29 +1,19 @@
+go.property("linear_velocity", 100)
+
 function init(self)
-	-- Add initialization code here
-	-- Remove this function if not needed
+	self.move_to_spot = nil
+	self.moving = false
 end
 
-function final(self)
-	-- Add finalization code here
-	-- Remove this function if not needed
-end
-
-function update(self, dt)
-	-- Add update code here
-	-- Remove this function if not needed
+function go_to(self, dt)
+	self.moving = true
+	local targetPos = go.get_position(self.move_to_spot)
+	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_INCUBIC, 2)
 end
 
 function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Remove this function if not needed
-end
-
-function on_input(self, action_id, action)
-	-- Add input-handling code here
-	-- Remove this function if not needed
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Remove this function if not needed
+	if (message_id == hash("move_to") and not self.moving) then
+		self.move_to_spot = message["spot"]
+		go_to(self, self.move_to_spot)
+	end
 end
