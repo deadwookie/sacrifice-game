@@ -5,7 +5,7 @@ instances {
   position {
     x: 126.0
     y: 132.0
-    z: 0.9
+    z: 0.1
   }
   rotation {
     x: 0.0
@@ -165,6 +165,26 @@ instances {
   position {
     x: 1304.0
     y: 647.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_1"
+  prototype: "/war/spot.go"
+  position {
+    x: 255.0
+    y: 131.0
     z: 0.0
   }
   rotation {

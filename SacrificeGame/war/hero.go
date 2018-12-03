@@ -1,3 +1,18 @@
+components {
+  id: "script"
+  component: "/levels/level_1/hero.script"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
 embedded_components {
   id: "head"
   type: "sprite"
@@ -9,7 +24,7 @@ embedded_components {
   position {
     x: 0.0
     y: 0.0
-    z: 0.91
+    z: 0.01
   }
   rotation {
     x: 0.0
@@ -74,7 +89,7 @@ embedded_components {
   position {
     x: 0.0
     y: 0.0
-    z: 0.9
+    z: 0.0
   }
   rotation {
     x: 0.0
