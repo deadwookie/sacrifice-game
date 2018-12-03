@@ -1,6 +1,25 @@
+go.property("squad_count", 1)
+
+local function game_over(self, result)
+	self.game_over = true
+	msg.post("game_over", "enable")
+	msg.post("main:/loader#script", "pause_level")
+end
+
+local function another_one_bite_the_dust(self, hero)
+	self.alive_count = self.alive_count - 1
+	if self.alive_count == 0 then
+		game_over(self, hash("lose"))
+	end
+end
+
 function init(self)
 	-- Tell input controls to direct messages here
 	msg.post("main:/controls#gui", "aquire_controls")
+	self.alive_count = self.squad_count
+	self.game_over = false
+
+	msg.post("game_over", "disable")
 end
 
 function final(self)
@@ -8,27 +27,19 @@ function final(self)
 	msg.post("main:/controls#gui", "release_controls")
 end
 
-function update(self, dt)
-	-- Add update code here
-	-- Remove this function if not needed
-end
-
 function on_message(self, message_id, message, sender)
 	if message_id == hash("action") then
 		if message["action"] == hash("back") then
-			msg.post("main:/main_menu#gui", "pause_level")
+			if self.game_over then
+				msg.post("game_over", "disable")
+				msg.post("main:/main_menu#gui", "finish_level")
+			else
+				msg.post("main:/main_menu#gui", "pause_level")
+			end
 		elseif message["action"] == hash("move") then
 			msg.post("level_1:/war/hero", "move_next")
 		end
+	elseif message_id == hash("death") then
+		another_one_bite_the_dust(self, sender)
 	end
-end
-
-function on_input(self, action_id, action)
-	-- Add input-handling code here
-	-- Remove this function if not needed
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Remove this function if not needed
 end

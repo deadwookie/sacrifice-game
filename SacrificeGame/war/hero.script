@@ -57,6 +57,7 @@ local function die(self, from)
 	
 	sprite.play_flipbook("#head", "die", function (self, message_id) 
 		print(message_id, 'HEADSHOT!')
+		msg.post("/controller", "death")
 	end)
 end
 
