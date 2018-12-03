@@ -26,3 +26,6 @@ app_icon = /assets/appicons/appicon.icns
 [sound]
 gain = 0.13333333
 
+[sprite]
+max_count = 256
+
