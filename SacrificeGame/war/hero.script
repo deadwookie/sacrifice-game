@@ -14,13 +14,17 @@ local function go_to(self, move_to_ind)
 	local pos = go.get_position()
 	local targetPos = go.get_position(get_spot_url(move_to_ind))
 	local t = vmath.length(targetPos - pos) / self.linear_velocity
-	local angle = math.atan2(targetPos.y - pos.y, targetPos.x - pos.x)
-	local targetRot = vmath.quat_rotation_z(3.141592653 / 2 + angle)
+	local angle = go.get(".", "euler.z")
+	local targetAngle = (math.pi / 2 + math.atan2(targetPos.y - pos.y, targetPos.x - pos.x)) * 180 / math.pi
+
+	if  then
+	end
+	
 	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_LINEAR, t, 0, function ()
 		self.spot = move_to_ind
 		self.moving = false
 	end)
-	go.animate(".", "rotation", go.PLAYBACK_ONCE_FORWARD, targetRot, go.EASING_INQUINT, t / 3, 0)
+	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, targetAngle, go.EASING_INQUINT, t / 4, 0)
 end
 
 function on_message(self, message_id, message, sender)
