@@ -9,6 +9,7 @@ function init(self)
 	msg.post("#legs", "disable")
 	self.moving = false
 	self.alive = true
+	self.moves_buffered = 0
 end
 
 local function go_to(self, move_to_ind)
@@ -28,6 +29,11 @@ local function go_to(self, move_to_ind)
 		self.spot = move_to_ind
 		self.moving = false
 		msg.post("#legs", "disable")
+
+		if self.moves_buffered > 0 then
+			self.moves_buffered = self.moves_buffered - 1
+			msg.post(".", "move_next")
+		end
 	end)
 	go.animate(".", "euler.z", go.PLAYBACK_ONCE_FORWARD, targetAngle, go.EASING_INQUINT, t / 4, 0)
 end
@@ -67,8 +73,12 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("move_to") and not self.moving then
 		go_to(self, message["spot"])
-	elseif message_id == hash("move_next") and not self.moving then
-		go_to(self, go.get(get_spot_url(self.spot), "next_spot"))
+	elseif message_id == hash("move_next") then
+		if not self.moving then
+			go_to(self, go.get(get_spot_url(self.spot), "next_spot"))
+		else
+			self.moves_buffered = self.moves_buffered + 1
+		end
 	elseif message_id == hash("collision_response") and message.group == hash("bullet") then
 		die(self, message.other_id)
 	end
