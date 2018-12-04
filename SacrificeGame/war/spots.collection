@@ -1195,6 +1195,230 @@ instances {
     z: 1.0
   }
 }
+instances {
+  id: "spot_42"
+  prototype: "/war/spot.go"
+  position {
+    x: 695.0
+    y: 395.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "43.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_43"
+  prototype: "/war/spot.go"
+  position {
+    x: 709.0
+    y: 396.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "44.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_44"
+  prototype: "/war/spot.go"
+  position {
+    x: 821.0
+    y: 444.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "45.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_45"
+  prototype: "/war/spot.go"
+  position {
+    x: 811.0
+    y: 457.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "46.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_46"
+  prototype: "/war/spot.go"
+  position {
+    x: 718.0
+    y: 514.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "47.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_47"
+  prototype: "/war/spot.go"
+  position {
+    x: 705.0
+    y: 519.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "48.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_48"
+  prototype: "/war/spot.go"
+  position {
+    x: 317.0
+    y: 599.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "49.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_49"
+  prototype: "/war/spot.go"
+  position {
+    x: 304.0
+    y: 604.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "-1.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "heropath"
