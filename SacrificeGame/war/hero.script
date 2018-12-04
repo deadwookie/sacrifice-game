@@ -64,7 +64,7 @@ local function die(self, from)
 	local shift = go.get(msg.url(nil, from, hash("script")), "killing_force") * 20
 	targetPos.x = targetPos.x - x * shift
 	targetPos.y = targetPos.y + y * shift
-	targetPos.z = 0
+	targetPos.z = -0.1
 
 	local t = shift / self.linear_velocity
 	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_LINEAR, t, 0)
