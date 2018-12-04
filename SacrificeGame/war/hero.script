@@ -8,12 +8,12 @@ end
 function init(self)
 	msg.post("#legs", "disable")
 	self.moving = false
-	self.alive = true
+	self.active = true
 	self.moves_buffered = 0
 end
 
 local function go_to(self, move_to_ind)
-	if not self.alive then
+	if not self.active then
 		return
 	end
 	
@@ -26,11 +26,16 @@ local function go_to(self, move_to_ind)
 
 	msg.post("#legs", "enable")
 	go.animate(".", "position", go.PLAYBACK_ONCE_FORWARD, targetPos, go.EASING_LINEAR, t, 0, function ()
+		local next_spot = go.get(get_spot_url(move_to_ind), "next_spot")
 		self.spot = move_to_ind
 		self.moving = false
 		msg.post("#legs", "disable")
 
-		if self.moves_buffered > 0 then
+		if next_spot == -1 then
+			self.moves_buffered = 0
+			self.active = false
+			msg.post("/controller", "save")
+		elseif self.moves_buffered > 0 then
 			self.moves_buffered = self.moves_buffered - 1
 			msg.post(".", "move_next")
 		end
@@ -39,7 +44,7 @@ local function go_to(self, move_to_ind)
 end
 
 local function die(self, from)
-	self.alive = false
+	self.active = false
 	msg.post("#legs", "disable")
 	msg.post("#collisionobject", "disable")
 	msg.post("#death", "play_sound")

@@ -8,8 +8,12 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("game_over") then
 		if message["result"] == hash("lose") then
 			msg.post("main:/sound#sad_music", "play_sound")
+			gui.set_text(gui.get_node("mission_status"), "MISSION FAILED")
+			gui.set_text(gui.get_node("text"), "GAME OVER")
 		else
 			msg.post("main:/sound#victory_music", "play_sound")
+			gui.set_text(gui.get_node("mission_status"), "MISSION COMPLETED")
+			gui.set_text(gui.get_node("text"), "YOU WIN")
 		end
 	elseif message_id == hash("disable") then
 		sound_off(self)

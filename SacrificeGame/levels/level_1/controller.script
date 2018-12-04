@@ -15,6 +15,10 @@ local function another_one_bite_the_dust(self, hero)
 	end
 end
 
+local function another_one_saved(self, hero)
+	game_over(self, hash("win"))
+end
+
 local function spawn(self)
 	self.alive_count = 0
 	-- Place squad
@@ -71,5 +75,7 @@ function on_message(self, message_id, message, sender)
 		end
 	elseif message_id == hash("death") then
 		another_one_bite_the_dust(self, sender)
+	elseif message_id == hash("save") then
+		another_one_saved(self, sender)
 	end
 end
