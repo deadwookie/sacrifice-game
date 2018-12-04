@@ -22,7 +22,7 @@ instances {
     }
     properties {
       id: "delay"
-      value: "2.0"
+      value: "0.2"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
