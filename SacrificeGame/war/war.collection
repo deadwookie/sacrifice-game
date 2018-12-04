@@ -1,33 +1,5 @@
 name: "war_field"
 instances {
-  id: "hero"
-  prototype: "/war/hero.go"
-  position {
-    x: 473.0
-    y: 241.0
-    z: 0.1
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.70710677
-    w: 0.70710677
-  }
-  component_properties {
-    id: "script"
-    properties {
-      id: "spot"
-      value: "30.0"
-      type: PROPERTY_TYPE_NUMBER
-    }
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
   id: "soldier_gun"
   prototype: "/war/soldier_gun.go"
   position {
