@@ -1,11 +1,15 @@
 local function mute(self)
 	self.is_muted = true
 	sound.set_group_gain(hash("master"), 0)
+	gui.set_enabled(gui.get_node("unmute"), true)
+	gui.set_enabled(gui.get_node("mute"), false)
 end
 
 local function unmute(self)
 	self.is_muted = false
 	sound.set_group_gain(hash("master"), self.master_gain)
+	gui.set_enabled(gui.get_node("unmute"), false)
+	gui.set_enabled(gui.get_node("mute"), true)
 end
 
 function init(self)
@@ -16,6 +20,7 @@ function init(self)
 	self.controls_active = false
 	self.is_muted = false
 	self.master_gain = sound.get_group_gain(hash("master"))
+	unmute(self)
 	msg.post("#", "hide_controls")
 	msg.post("#", "acquire_input_focus")
 end

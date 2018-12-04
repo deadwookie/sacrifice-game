@@ -16,6 +16,9 @@ images {
 images {
   image: "/assets/images/btn_sound.png"
 }
+images {
+  image: "/assets/images/btn_muted.png"
+}
 margin: 0
 extrude_borders: 4
 inner_padding: 0
