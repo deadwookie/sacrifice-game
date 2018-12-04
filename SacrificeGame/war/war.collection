@@ -372,7 +372,7 @@ instances {
     }
     properties {
       id: "delay"
-      value: "0.0"
+      value: "8.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -425,7 +425,7 @@ instances {
     }
     properties {
       id: "delay"
-      value: "2.0"
+      value: "7.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -449,8 +449,8 @@ instances {
   id: "soldier_gun7"
   prototype: "/war/soldier_gun.go"
   position {
-    x: 763.0
-    y: 574.0
+    x: 760.0
+    y: 572.0
     z: 0.1
   }
   rotation {
@@ -578,6 +578,11 @@ instances {
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
+      id: "delay"
+      value: "10.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
       id: "fire_interval"
       value: "3.0"
       type: PROPERTY_TYPE_NUMBER
@@ -664,6 +669,11 @@ instances {
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
+      id: "delay"
+      value: "15.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
       id: "fire_interval"
       value: "3.0"
       type: PROPERTY_TYPE_NUMBER
@@ -679,8 +689,8 @@ instances {
   id: "soldier_gun12"
   prototype: "/war/soldier_gun.go"
   position {
-    x: 429.0
-    y: 303.0
+    x: 424.0
+    y: 309.0
     z: 0.1
   }
   rotation {
@@ -707,6 +717,11 @@ instances {
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
+      id: "delay"
+      value: "10.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
       id: "burst_interval"
       value: "0.1"
       type: PROPERTY_TYPE_NUMBER
@@ -724,18 +739,18 @@ instances {
   }
 }
 instances {
-  id: "hummer"
+  id: "panzer2"
   prototype: "/war/panzer.go"
   position {
-    x: 708.0
-    y: 677.0
+    x: 564.0
+    y: 630.0
     z: 0.0
   }
   rotation {
     x: 0.0
     y: 0.0
-    z: -0.27902114
-    w: 0.96028495
+    z: -0.05167545
+    w: 0.9986639
   }
   scale3 {
     x: 1.0
@@ -1977,6 +1992,126 @@ embedded_instances {
   "    w: 0.7968497\n"
   "  }\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"stump10\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/atlases/obstacles.atlas\\\"\\n"
+  "default_animation: \\\"TDS04_0007_Tree06\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 817.0\n"
+  "    y: 578.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.7583477\n"
+  "    w: 0.6518502\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"stump17\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/atlases/obstacles.atlas\\\"\\n"
+  "default_animation: \\\"TDS04_0007_Tree06\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 857.0\n"
+  "    y: 578.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.3095911\n"
+  "    w: 0.95086974\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"stump18\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/atlases/obstacles.atlas\\\"\\n"
+  "default_animation: \\\"TDS04_0007_Tree06\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 894.0\n"
+  "    y: 582.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.7186991\n"
+  "    w: 0.69532114\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"stump19\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/atlases/obstacles.atlas\\\"\\n"
+  "default_animation: \\\"TDS04_0007_Tree06\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 924.0\n"
+  "    y: 572.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.3762894\n"
+  "    w: 0.9265021\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"stump20\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/atlases/obstacles.atlas\\\"\\n"
+  "default_animation: \\\"TDS04_0007_Tree06\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 799.0\n"
+  "    y: 435.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.3762894\n"
+  "    w: 0.9265021\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"stump21\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/atlases/obstacles.atlas\\\"\\n"
+  "default_animation: \\\"TDS04_0008_Tree05\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 966.0\n"
+  "    y: 574.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.92344695\n"
+  "    w: 0.38372597\n"
+  "  }\n"
+  "}\n"
   ""
   position {
     x: 0.0
@@ -2155,7 +2290,7 @@ embedded_instances {
   position {
     x: 472.0
     y: 283.0
-    z: 0.2
+    z: 0.0
   }
   rotation {
     x: 6.3139064E-16
@@ -2200,8 +2335,8 @@ embedded_instances {
   rotation {
     x: 0.0
     y: 0.0
-    z: 0.0
-    w: 1.0
+    z: 0.03956039
+    w: 0.99921715
   }
   scale3 {
     x: 1.0
@@ -2273,8 +2408,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 918.0
-    y: 652.0
+    x: 915.0
+    y: 662.0
     z: 0.0
   }
   rotation {
@@ -2399,8 +2534,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 126.2
-    y: 164.198
+    x: 133.2
+    y: 154.198
     z: 0.0
   }
   rotation {
@@ -7658,15 +7793,15 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 281.0
-    y: 253.0
+    x: 804.0
+    y: 620.0
     z: 0.0
   }
   rotation {
     x: 0.0
     y: 0.0
-    z: -0.25486875
-    w: -0.9669757
+    z: 0.7053902
+    w: -0.70881927
   }
   scale3 {
     x: 1.0
@@ -7879,8 +8014,8 @@ embedded_instances {
   rotation {
     x: 0.0
     y: 0.0
-    z: 0.0
-    w: 1.0
+    z: -0.044097666
+    w: 0.99902725
   }
   scale3 {
     x: 1.0
@@ -8253,6 +8388,86 @@ embedded_instances {
     y: 0.0
     z: -0.209211
     w: 0.9778705
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "hummer"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/atlases/transport.atlas\\\"\\n"
+  "default_animation: \\\"Humvee2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 700.0
+    y: 710.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.8716919
+    w: 0.4900543
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "hummer1"
+  data: "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/atlases/transport.atlas\\\"\\n"
+  "default_animation: \\\"Humvee2\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 705.0
+    y: 640.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.8716919
+    w: 0.4900543
   }
   scale3 {
     x: 1.0

@@ -216,7 +216,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "YOU LOSE"
+  text: "GAME OVER"
   font: "semibold"
   id: "text"
   xanchor: XANCHOR_NONE
