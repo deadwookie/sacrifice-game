@@ -24,8 +24,9 @@ app_icon = /assets/appicons/appicon.ico
 app_icon = /assets/appicons/appicon.icns
 
 [sound]
-gain = 0.03333333
+gain = 0.3333333
 
 [sprite]
-max_count = 256
+max_count = 512
+subpixels = 1
 

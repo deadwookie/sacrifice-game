@@ -4,6 +4,12 @@ images {
 images {
   image: "/assets/images/transport/BTR_BrokenBase.png"
 }
+images {
+  image: "/assets/images/transport/BTR_BrokenTower.png"
+}
+images {
+  image: "/assets/images/transport/helicopter/BrokenBase.png"
+}
 margin: 0
 extrude_borders: 0
 inner_padding: 0

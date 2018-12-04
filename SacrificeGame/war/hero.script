@@ -41,6 +41,9 @@ local function die(self, from)
 	-- where the corpse flies?
 	local selfAngle = go.get(".", "euler.z")
 	local bulletAngle = go.get(from, "euler.z")
+	if bulletAngle > selfAngle then
+		bulletAngle, selfAngle = selfAngle, bulletAngle
+	end
 	local angle = math.random(bulletAngle, selfAngle) - 90
 	
 	local x = math.cos(math.rad(angle))

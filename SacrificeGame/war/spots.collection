@@ -867,6 +867,334 @@ instances {
     z: 1.0
   }
 }
+instances {
+  id: "spot_31"
+  prototype: "/war/spot.go"
+  position {
+    x: 374.0
+    y: 263.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "32.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_32"
+  prototype: "/war/spot.go"
+  position {
+    x: 228.0
+    y: 253.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "33.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_33"
+  prototype: "/war/spot.go"
+  position {
+    x: 121.0
+    y: 297.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "34.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_34"
+  prototype: "/war/spot.go"
+  position {
+    x: 131.0
+    y: 307.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "35.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_35"
+  prototype: "/war/spot.go"
+  position {
+    x: 141.0
+    y: 317.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "36.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_38"
+  prototype: "/war/spot.go"
+  position {
+    x: 465.0
+    y: 393.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "39.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_36"
+  prototype: "/war/spot.go"
+  position {
+    x: 236.0
+    y: 392.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "37.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_37"
+  prototype: "/war/spot.go"
+  position {
+    x: 253.0
+    y: 390.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "38.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_"
+  prototype: "/war/spot.go"
+  position {
+    x: 342.0
+    y: 8.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_39"
+  prototype: "/war/spot.go"
+  position {
+    x: 475.0
+    y: 389.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "40.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_40"
+  prototype: "/war/spot.go"
+  position {
+    x: 485.0
+    y: 387.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "41.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "spot_41"
+  prototype: "/war/spot.go"
+  position {
+    x: 495.0
+    y: 384.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "spot"
+    properties {
+      id: "next_spot"
+      value: "42.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "heropath"
