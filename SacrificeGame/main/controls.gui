@@ -59,7 +59,7 @@ nodes {
   clipping_mode: CLIPPING_MODE_NONE
   clipping_visible: true
   clipping_inverted: false
-  alpha: 0.33
+  alpha: 0.6
   template_node_child: false
   size_mode: SIZE_MODE_AUTO
 }
@@ -167,7 +167,7 @@ nodes {
   clipping_mode: CLIPPING_MODE_NONE
   clipping_visible: true
   clipping_inverted: false
-  alpha: 0.33
+  alpha: 0.6
   template_node_child: false
   size_mode: SIZE_MODE_AUTO
 }

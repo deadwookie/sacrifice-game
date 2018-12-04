@@ -1068,7 +1068,7 @@ nodes {
   }
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
-  text: "Controls: Press [SPACE] to move"
+  text: "Controls: Press [SPACE] to Move"
   font: "small"
   id: "controls_label"
   xanchor: XANCHOR_NONE

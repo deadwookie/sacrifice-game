@@ -237,6 +237,11 @@ instances {
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
+      id: "delay"
+      value: "1.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
       id: "burst_interval"
       value: "0.1"
       type: PROPERTY_TYPE_NUMBER
@@ -320,6 +325,11 @@ instances {
     properties {
       id: "burst"
       value: "10.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "delay"
+      value: "5.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -454,21 +464,21 @@ instances {
     z: 0.1
   }
   rotation {
-    x: 1.0947005E-15
-    y: -1.9418388E-16
-    z: 6.4931635E-4
-    w: 0.9999998
+    x: 1.0912525E-15
+    y: -2.1270803E-16
+    z: -0.016297907
+    w: 0.9998672
   }
   component_properties {
     id: "soldier1"
     properties {
       id: "angular_range"
-      value: "5.0"
+      value: "10.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
       id: "angular_velocity"
-      value: "5.0"
+      value: "10.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -478,7 +488,7 @@ instances {
     }
     properties {
       id: "delay"
-      value: "10.0"
+      value: "12.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -626,6 +636,11 @@ instances {
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
+      id: "delay"
+      value: "10.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
       id: "burst_interval"
       value: "0.1"
       type: PROPERTY_TYPE_NUMBER
@@ -694,21 +709,21 @@ instances {
     z: 0.1
   }
   rotation {
-    x: 1.2569065E-16
-    y: -7.491992E-16
-    z: -0.105063185
-    w: 0.99446553
+    x: 9.558826E-17
+    y: -7.536315E-16
+    z: -0.14480214
+    w: 0.9894606
   }
   component_properties {
     id: "soldier1"
     properties {
       id: "angular_range"
-      value: "5.0"
+      value: "10.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
       id: "angular_velocity"
-      value: "30.0"
+      value: "10.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -718,7 +733,7 @@ instances {
     }
     properties {
       id: "delay"
-      value: "10.0"
+      value: "2.0"
       type: PROPERTY_TYPE_NUMBER
     }
     properties {
@@ -2288,15 +2303,15 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 472.0
-    y: 283.0
+    x: 473.0
+    y: 285.0
     z: 0.0
   }
   rotation {
-    x: 6.3139064E-16
-    y: 2.9261343E-16
-    z: 0.32166097
-    w: 0.9468549
+    x: 6.16997E-16
+    y: 3.2185627E-16
+    z: 0.36564302
+    w: 0.93075514
   }
   scale3 {
     x: 1.0
@@ -6996,7 +7011,7 @@ embedded_instances {
   "  shapes {\\n"
   "    shape_type: TYPE_SPHERE\\n"
   "    position {\\n"
-  "      x: 4.903\\n"
+  "      x: 5.903\\n"
   "      y: 6.924\\n"
   "      z: 0.0\\n"
   "    }\\n"
@@ -7012,8 +7027,8 @@ embedded_instances {
   "  shapes {\\n"
   "    shape_type: TYPE_SPHERE\\n"
   "    position {\\n"
-  "      x: -1.635\\n"
-  "      y: -2.309\\n"
+  "      x: -0.635\\n"
+  "      y: -5.309\\n"
   "      z: 0.0\\n"
   "    }\\n"
   "    rotation {\\n"
@@ -7066,19 +7081,19 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 370.0
+    x: 373.0
     y: 255.0
     z: 0.0
   }
   rotation {
     x: 0.0
     y: 0.0
-    z: -0.49655914
-    w: 0.8680029
+    z: -0.60115004
+    w: 0.79913616
   }
   scale3 {
     x: 1.0
-    y: 1.0
+    y: 1.135
     z: 1.0
   }
 }
