@@ -76,7 +76,7 @@ embedded_instances {
 embedded_instances {
   id: "game_over"
   data: "components {\n"
-  "  id: \"game_over\"\n"
+  "  id: \"gui\"\n"
   "  component: \"/levels/level_1/game_over.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"

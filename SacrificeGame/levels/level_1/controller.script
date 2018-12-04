@@ -5,7 +5,6 @@ local function game_over(self, result)
 
 	msg.post("game_over", "game_over", { result = result })
 	msg.post("game_over", "enable")
-	msg.post("game_over", "music_on")
 	msg.post("main:/loader#script", "pause_level")
 end
 

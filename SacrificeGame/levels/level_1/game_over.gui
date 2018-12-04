@@ -1,4 +1,4 @@
-script: ""
+script: "/levels/level_1/game_over.gui_script"
 fonts {
   name: "semibold"
   font: "/assets/fonts/semibold.font"

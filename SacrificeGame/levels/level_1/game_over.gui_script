@@ -1,0 +1,21 @@
+
+local function sound_off(self)
+	msg.post("main:/sound#sad_music", "stop_sound")
+	msg.post("main:/sound#victory_music", "stop_sound")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("game_over") then
+		if message["result"] == hash("lose") then
+			msg.post("main:/sound#sad_music", "play_sound")
+		else
+			msg.post("main:/sound#victory_music", "play_sound")
+		end
+	elseif message_id == hash("disable") then
+		sound_off(self)
+	end
+end
+
+function final(self)
+	sound_off(self)
+end
