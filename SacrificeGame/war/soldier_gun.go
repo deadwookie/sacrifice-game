@@ -77,7 +77,7 @@ embedded_components {
   data: "sound: \"/assets/sounds/rifle-gunshot-01.ogg\"\n"
   "looping: 0\n"
   "group: \"master\"\n"
-  "gain: 1.0\n"
+  "gain: 0.5\n"
   ""
   position {
     x: 0.0

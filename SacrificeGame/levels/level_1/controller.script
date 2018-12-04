@@ -14,13 +14,13 @@ local function another_one_bite_the_dust(self, hero)
 end
 
 local function spawn(self)
-	self.alive_count = self.squad_count
+	self.alive_count = 0
 	-- Place squad
 	self.squad = {}
 	local step = vmath.vector3(-5, 0.5, -0.001)
 	local pos = go.get("/war/spots/spot_0", "position")
 	local rot = vmath.quat_rotation_z(math.pi / 2)
-	for i = 0, self.squad_count do
+	for i = 0, self.squad_count - 1 do
 		-- Spawn an hero
 		local step_mod = vmath.vector3(1, math.random() > 0.5 and 1 or -1, 1) 
 		local hero_id = factory.create("#hero_factory", pos + vmath.mul_per_elem(step, step_mod) * i, rot)
@@ -28,6 +28,7 @@ local function spawn(self)
 		msg.post(hero_id, "set_parent", { parent_id = go.get_id() })
 		-- Store the hero root object for easy access.
 		table.insert(self.squad, hero_id)
+		self.alive_count = self.alive_count + 1
 	end
 end
 
