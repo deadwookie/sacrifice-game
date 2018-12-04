@@ -1,0 +1,9 @@
+You play as a leader of special unit, and your objective is to capture the helicopter on the enemy’s base.
+
+You can move only forward. NOT A STEP BACK. That’s the order!
+
+Try to save as many people as possible.
+
+Build on Defold. Graphics from CraftPix. Sounds from freesound.org.
+
+This is our first LD entry. Looking forward to hear any thoughts from you!
