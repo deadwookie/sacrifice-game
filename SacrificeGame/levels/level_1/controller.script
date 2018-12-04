@@ -1,7 +1,9 @@
-go.property("squad_count", 10)
+go.property("squad_count", 12)
 
 local function game_over(self, result)
 	self.game_over = true
+
+	msg.post("game_over", "game_over", { result = result })
 	msg.post("game_over", "enable")
 	msg.post("main:/loader#script", "pause_level")
 end

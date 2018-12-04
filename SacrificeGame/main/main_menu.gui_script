@@ -41,7 +41,7 @@ end
 
 function init(self)
 	msg.post("#", "acquire_input_focus")
-	self.buttons =  { "new_game", "about", "resume_game", "exit_game" }
+	self.buttons =  { "new_game", "resume_game", "exit_game" }
 	
 	-- On-screen controls off
 	msg.post("main:/controls#gui", "off")
